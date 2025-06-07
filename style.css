@@ -1,15 +1,17 @@
+/* CSS Variablen für das helle Theme */
 :root {
-    --bg-color: #f4f4f4;
-    --text-color: #333;
-    --primary-color: #007bff;
-    --primary-hover-color: #0056b3;
-    --border-color: #ddd;
-    --input-bg: #fff;
-    --header-bg: #e9ecef;
-    --button-bg: var(--primary-color);
-    --button-text: #fff;
+    --bg-color: #f4f4f4; /* Hintergrundfarbe */
+    --text-color: #333; /* Textfarbe */
+    --primary-color: #007bff; /* Akzentfarbe */
+    --primary-hover-color: #0056b3; /* Akzentfarbe bei Hover */
+    --border-color: #ddd; /* Rahmenfarbe */
+    --input-bg: #fff; /* Hintergrundfarbe für Eingabefelder */
+    --header-bg: #e9ecef; /* Hintergrundfarbe für Header */
+    --button-bg: var(--primary-color); /* Hintergrundfarbe für Buttons */
+    --button-text: #fff; /* Textfarbe für Buttons */
 }
 
+/* CSS Variablen für das dunkle Theme */
 body.dark-mode {
     --bg-color: #1a1a1a;
     --text-color: #f4f4f4;
@@ -22,148 +24,168 @@ body.dark-mode {
     --button-text: #1a1a1a;
 }
 
+/* Grundlegende Reset-Regeln */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box; /* Stellt sicher, dass Padding und Border in der Elementbreite enthalten sind */
+    margin: 0; /* Entfernt Standard-Margin */
+    padding: 0; /* Entfernt Standard-Padding */
 }
 
+/* Body-Styles */
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-    display: flex;
-    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; /* Bevorzugte Schriftart */
+    background-color: var(--bg-color); /* Hintergrundfarbe vom Theme */
+    color: var(--text-color); /* Textfarbe vom Theme */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    transition: background-color 0.3s, color 0.3s; /* Sanfter Übergang bei Theme-Wechsel */
+    display: flex; /* Flexbox für Zentrierung */
+    justify-content: center; /* Horizontal zentrieren */
     align-items: flex-start; /* Startet oben */
-    min-height: 100vh;
+    min-height: 100vh; /* Mindesthöhe des Viewports */
     padding-top: 20px; /* Etwas Abstand oben */
 }
 
+/* Container für den Hauptinhalt */
 .container {
-    background-color: var(--header-bg); /* Leichter Kontrast zum Body */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    width: 90%;
-    max-width: 600px;
-    transition: background-color 0.3s;
+    background-color: var(--header-bg); /* Hintergrundfarbe (leichter Kontrast zum Body) */
+    padding: 20px; /* Innenabstand */
+    border-radius: 8px; /* Abgerundete Ecken */
+    box-shadow: 0 0 15px rgba(0,0,0,0.1); /* Leichter Schatten */
+    width: 90%; /* Breite auf kleineren Bildschirmen */
+    max-width: 600px; /* Maximale Breite */
+    transition: background-color 0.3s; /* Sanfter Übergang bei Theme-Wechsel */
 }
 
+/* Header-Styles */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 15px;
+    display: flex; /* Flexbox für Anordnung von Überschrift und Button */
+    justify-content: space-between; /* Überschrift links, Button rechts */
+    align-items: center; /* Vertikal zentrieren */
+    margin-bottom: 20px; /* Abstand nach unten */
+    border-bottom: 1px solid var(--border-color); /* Trennlinie */
+    padding-bottom: 15px; /* Abstand unter der Trennlinie */
 }
 
+/* Überschrift im Header */
 header h1 {
-    font-size: 1.8em;
-    color: var(--primary-color);
+    font-size: 1.8em; /* Schriftgröße */
+    color: var(--primary-color); /* Farbe vom Theme */
 }
 
+/* Style für den Theme-Toggle-Button */
 #theme-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    color: var(--text-color);
+    background: none; /* Kein Hintergrund */
+    border: none; /* Kein Rahmen */
+    cursor: pointer; /* Cursor als Zeiger */
+    padding: 5px; /* Innenabstand */
+    color: var(--text-color); /* Farbe vom Theme (für eventuellen Text) */
 }
 
+/* Style für die SVG-Icons im Theme-Toggle-Button */
 #theme-toggle svg {
-    width: 24px;
-    height: 24px;
-    stroke: var(--text-color); /* Farbe für Icons */
+    width: 24px; /* Breite des Icons */
+    height: 24px; /* Höhe des Icons */
+    stroke: var(--text-color); /* Farbe für Icons (vom Theme) */
 }
 
+/* Allgemeine Styles für die Konverter-Sektionen (Text- und Morse-Input) */
 .converter-section {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Abstand nach unten */
 }
 
+/* Styles für Labels */
 label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+    display: block; /* Zeilenumbruch nach Label */
+    margin-bottom: 5px; /* Abstand nach unten */
+    font-weight: bold; /* Fetter Text */
 }
 
+/* Styles für Textarea-Felder */
 textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    background-color: var(--input-bg);
-    color: var(--text-color);
-    font-family: monospace; /* Gut für Morsecode */
-    font-size: 1em;
-    resize: vertical;
-    min-height: 80px;
-    transition: background-color 0.3s, border-color 0.3s;
+    width: 100%; /* Volle Breite des Containers */
+    padding: 10px; /* Innenabstand */
+    border: 1px solid var(--border-color); /* Rahmenfarbe vom Theme */
+    border-radius: 4px; /* Abgerundete Ecken */
+    background-color: var(--input-bg); /* Hintergrundfarbe vom Theme */
+    color: var(--text-color); /* Textfarbe vom Theme */
+    font-family: monospace; /* Monospace-Schriftart */
+    font-size: 1em; /* Schriftgröße */
+    resize: vertical; /* Nur vertikales Resizing erlauben */
+    min-height: 80px; /* Mindesthöhe */
+    transition: background-color 0.3s, border-color 0.3s; /* Sanfter Übergang bei Theme-Wechsel und Fokus */
 }
 
+/* Styles für Textarea bei Fokus */
 textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-    box-shadow: 0 0 0 2px var(--primary-color-translucent, rgba(0, 123, 255, 0.25));
+    outline: none; /* Entfernt Standard-Outline */
+    border-color: var(--primary-color); /* Akzentfarbe als Rahmen */
+    box-shadow: 0 0 0 2px var(--primary-color-translucent, rgba(0, 123, 255, 0.25)); /* Leichter Schatteneffekt */
 }
 
+/* Spezifischer Schatteneffekt für Textarea bei Fokus im Dunkelmodus */
 body.dark-mode textarea:focus {
      box-shadow: 0 0 0 2px var(--primary-color-translucent, rgba(0, 170, 255, 0.25));
 }
 
 
+/* Allgemeine Button-Styles */
 button {
-    padding: 10px 15px;
-    background-color: var(--button-bg);
-    color: var(--button-text);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.2s;
-    margin-top: 10px;
+    padding: 10px 15px; /* Innenabstand */
+    background-color: var(--button-bg); /* Hintergrundfarbe vom Theme */
+    color: var(--button-text); /* Textfarbe vom Theme */
+    border: none; /* Kein Rahmen */
+    border-radius: 4px; /* Abgerundete Ecken */
+    cursor: pointer; /* Cursor als Zeiger */
+    font-size: 1em; /* Schriftgröße */
+    transition: background-color 0.2s; /* Sanfter Übergang bei Hover */
+    margin-top: 10px; /* Abstand nach oben */
 }
 
+/* Style für Button bei Hover (außer wenn disabled) */
 button:hover:not(:disabled) {
-    background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color); /* Geänderte Hintergrundfarbe bei Hover */
 }
 
+/* Style für disabled Buttons */
 button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    background-color: #ccc; /* Grauer Hintergrund */
+    cursor: not-allowed; /* Cursor als "nicht erlaubt" */
 }
 
+/* Style für disabled Buttons im Dunkelmodus */
 body.dark-mode button:disabled {
     background-color: #555;
     color: #888;
 }
 
+/* Styles für die Audio-Steuerelemente */
 .audio-controls {
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
+    margin-top: 20px; /* Abstand nach oben */
+    padding-top: 15px; /* Abstand über der Trennlinie */
+    border-top: 1px solid var(--border-color); /* Trennlinie */
+    display: flex; /* Flexbox für Anordnung */
+    align-items: center; /* Vertikal zentrieren */
     gap: 10px; /* Abstand zwischen Elementen */
 }
 
+/* Style für Label in Audio-Steuerelementen */
 .audio-controls label {
-    margin-bottom: 0; /* Label neben Checkbox */
-    font-weight: normal;
+    margin-bottom: 0; /* Entfernt unteren Abstand, da Label neben Checkbox steht */
+    font-weight: normal; /* Normaler Schriftschnitt */
 }
 
+/* Spezifischer Style für den Play-Button */
 #play-morse-btn {
-    margin-top: 0; /* Kein extra Margin, da in Flexbox */
+    margin-top: 0; /* Kein extra Margin, da er Teil der Flexbox ist */
 }
 
+/* Footer-Styles */
 footer {
-    text-align: center;
-    margin-top: 30px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-color);
-    font-size: 0.9em;
-    color: var(--text-color);
-    opacity: 0.7;
+    text-align: center; /* Text zentrieren */
+    margin-top: 30px; /* Abstand nach oben */
+    padding-top: 15px; /* Abstand über der Trennlinie */
+    border-top: 1px solid var(--border-color); /* Trennlinie */
+    font-size: 0.9em; /* Kleinere Schriftgröße */
+    color: var(--text-color); /* Textfarbe vom Theme */
+    opacity: 0.7; /* Leichte Transparenz */
 }
